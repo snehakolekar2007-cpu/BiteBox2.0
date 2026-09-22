@@ -2492,10 +2492,16 @@ footer > p{
 @media (prefers-reduced-motion: reduce) {
 
     #menu-items article,
+    #menu-items article:hover,
     #menu-items article > img,
+    #menu-items article:hover > img,
     #menu-items article > button,
+    #menu-items article > button:hover,
+    #menu-items article > button:active,
     #menu-items article > button .cart,
-    .cart-icon #cart-count {
+    #menu-items article > button:hover .cart,
+    .cart-icon #cart-count,
+    .cart-icon #cart-count.pop {
         transition: none;
         animation: none;
         transform: none;
