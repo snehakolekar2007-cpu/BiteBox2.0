@@ -2373,6 +2373,144 @@ footer > p{
 
 
 
+/* Add to Cart Button */
+
+#menu-items article {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#menu-items article:hover {
+    transform: translateY(-4px);
+}
+
+#menu-items article > img {
+    transition: transform 0.35s ease;
+}
+
+#menu-items article:hover > img {
+    transform: scale(1.06);
+}
+
+#menu-items article > button {
+    height: auto;
+    letter-spacing: 0.2px;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+        box-shadow 0.25s ease, transform 0.15s ease;
+}
+
+#menu-items article > button .cart {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+#menu-items article > button:hover {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff3b30 100%);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 6px 14px rgba(255, 59, 48, 0.32);
+    transform: translateY(-2px);
+}
+
+#menu-items article > button:hover .cart {
+    transform: translateX(3px) scale(1.12);
+    filter: brightness(0) invert(1);
+}
+
+#menu-items article > button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(255, 59, 48, 0.28);
+}
+
+#menu-items article > button:focus-visible {
+    outline: 2px solid #ff3b30;
+    outline-offset: 2px;
+}
+
+#menu-items article > button.added,
+#menu-items article > button.added:hover {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(39, 174, 96, 0.32);
+    transform: translateY(0);
+}
+
+#menu-items article > button.added .cart {
+    filter: brightness(0) invert(1);
+    transform: none;
+}
+
+
+/* Header Cart Badge */
+
+.cart-icon .cart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon #cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    box-sizing: border-box;
+
+    background: #ff3b30;
+    color: #ffffff;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 17px;
+    text-align: center;
+}
+
+.cart-icon #cart-count[hidden] {
+    display: none;
+}
+
+.cart-icon #cart-count.pop {
+    animation: cart-count-pop 0.35s ease;
+}
+
+@keyframes cart-count-pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.45);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #menu-items article,
+    #menu-items article:hover,
+    #menu-items article > img,
+    #menu-items article:hover > img,
+    #menu-items article > button,
+    #menu-items article > button:hover,
+    #menu-items article > button:active,
+    #menu-items article > button .cart,
+    #menu-items article > button:hover .cart,
+    .cart-icon #cart-count,
+    .cart-icon #cart-count.pop {
+        transition: none;
+        animation: none;
+        transform: none;
+    }
+}
+
+
+
+
 /* ====================================================== Tablet Responsive ============================================*/
 
 /*=================== Responsive Header =====================*/
